@@ -10,21 +10,12 @@ public class NavigationBar{
 	
 	public NavigationBar(WebDriver driver) {
 		this.driver=driver;
-		PageFactory.initElements(driver,this);
+		PageFactory.initElements(driver, this);
 	}
-	
 	@FindBy(xpath="//img[@id='enterimg']")
 	WebElement entering;
-	
-	@FindBy(xpath="//ul[@class='nav navbar-nav']/li[3]/a")
-	WebElement webTable;
-	
 	public void Enter() {
 		entering.click();
 	}
-	public void webTablenavigate() {
-		webTable.click();
-	}
-	
 	
 }

@@ -3,7 +3,8 @@
 <suite name="Suite">
 	<test name="Test">
 		<classes>
-			<class name="Tour.Baseclass" />
+			<class name="Tour.NavigationSel" />
+			<class name="Tour.RegisterPageFill" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
