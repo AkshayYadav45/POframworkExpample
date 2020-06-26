@@ -10,11 +10,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class RegisterPage {
+public class RegisterPO {
 	WebDriver driver;
-	public RegisterPage(WebDriver driver) {
+	public RegisterPO(WebDriver driver) {
 		this.driver=driver;
-		PageFactory.initElements(driver,this);
+	
 	}	
 	@FindBy(xpath="//input[@placeholder='First Name']")
 	WebElement fristName;
@@ -36,20 +36,5 @@ public class RegisterPage {
 	}
 	public void address(String adress) {
 		Address.sendKeys(adress);
-	}
-	public void chooseFile() {
-		Actions act=new Actions(driver);
-		act.moveToElement(ChooseFile).click().build().perform();
-	}
-	public void chooseFrom() throws AWTException, InterruptedException {
-		Robot r=new Robot();
-		Thread.sleep(2000);
-		r.keyPress(KeyEvent.VK_A);
-		r.keyPress(KeyEvent.VK_K);
-		r.keyPress(KeyEvent.VK_S);
-		r.keyPress(KeyEvent.VK_H);
-		r.keyPress(KeyEvent.VK_A);
-		r.keyPress(KeyEvent.VK_Y);
-		r.keyPress(KeyEvent.VK_ENTER);
 	}
 }

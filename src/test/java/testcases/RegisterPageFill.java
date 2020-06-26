@@ -1,24 +1,21 @@
-package Tour;
+package testcases;
 
 import java.awt.AWTException;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-import pageObject.RegisterPage;
+import Base.Baseclass;
+import pageObject.RegisterPO;
 
 public class RegisterPageFill extends Baseclass {
 
 	@Test(priority=2)
 	public void fillRegisterPage() throws AWTException, InterruptedException {
 
-		RegisterPage rp=new RegisterPage(driver);
-
+		RegisterPO rp=PageFactory.initElements(driver, RegisterPO.class);
 		rp.fristNameFill("akshay");
 		rp.lastNameFill("yadav");
-		rp.address("pune");
-		rp.chooseFile();
-		rp.chooseFrom();
 		
 	}
 }

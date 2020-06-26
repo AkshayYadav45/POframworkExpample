@@ -1,4 +1,4 @@
-package Tour;
+package Base;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeSuite;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Baseclass {
-	WebDriver driver;
+	protected static WebDriver driver;
 	public static Properties prop;
 	public static FileInputStream f;
 
@@ -30,5 +30,6 @@ public class Baseclass {
 		driver.get("http://demo.automationtesting.in/Index.html");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		
 	}
 }
